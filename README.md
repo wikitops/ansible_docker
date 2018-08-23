@@ -9,9 +9,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to run this Ansible playbook :
 
-* [Vagrant](https://www.vagrantup.com/docs/installation/) must be installed on your computer
-* Update the Vagrant file based on your computer (CPU, memory), if needed
-* You must have download the ubuntu Xenial64 vagrant box :
+*   [Vagrant](https://www.vagrantup.com/docs/installation/) must be installed on your computer
+*   Update the Vagrant file based on your computer (CPU, memory), if needed
+*   You must have download the ubuntu Xenial64 vagrant box :
 
 ```
 vagrant box add https://app.vagrantup.com/ubuntu/boxes/xenial64
@@ -68,3 +68,7 @@ vagrant destroy
 ## Author
 
 Member of Wikitops : https://www.wikitops.io/
+
+## Licence
+
+This project is licensed under the Apache License, Version 2.0. For the full text of the license, see the LICENSE file.
