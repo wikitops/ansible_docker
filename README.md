@@ -1,4 +1,5 @@
 # Ansible : Playbook Docker
+
 The aim of this project is to deploy a simple Docker instance on Vagrant.
 
 ## Getting Started
