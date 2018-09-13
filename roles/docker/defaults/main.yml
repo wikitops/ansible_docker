@@ -20,3 +20,9 @@ docker_compose_path: /usr/local/bin/docker-compose
 
  # Docker users
 docker_users: []
+
+# DockerHub registry login
+docker_login:
+  username: ""
+  password: ""
+  email: ""
