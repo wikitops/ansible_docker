@@ -50,6 +50,14 @@ docker01                   running (virtualbox)
 
 #### Deployment
 
+This playbook has some dependencies to other roles that must be downloaded before executing the playbook :
+
+```
+ansible-galaxy install -r requirements.yml
+```
+
+This command should download the Pip role from Wikitops Github account to the local role path.
+
 To deploy Docker on Vagrant, you just have to run the Ansible playbook docker.yml with this command :
 
 ```
