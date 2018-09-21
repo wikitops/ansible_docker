@@ -26,7 +26,7 @@
   when: docker_users
   tags: update-docker-user
 
-- name: DOCKER | Log to an existng account
+- name: DOCKER | Log to an existing account
   include_tasks: login.yml
-  when: docker_login is defined
+  when: docker_login is defined and docker_login.username != ""
   tags: update-docker-login
