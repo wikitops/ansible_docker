@@ -68,7 +68,7 @@ If all run like it is expected, you should run docker command on the Vagrant ins
 
 #### Destroy
 
-To destroy on what Vagrant has created, just run this command :
+To destroy the Vagrant resources created, just run this command :
 
 ```bash
 $ vagrant destroy
