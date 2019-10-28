@@ -3,9 +3,9 @@
 
 # List of supported operating systems
 SUPPORTED_OS = {
-  "debian"   => {box: "debian/jessie64", bootstrap_os: "debian", user: "vagrant"},
-  "ubuntu"   => {box: "ubuntu/bionic64", bootstrap_os: "ubuntu", user: "vagrant"},
-  "centos"   => {box: "centos/7",        bootstrap_os: "centos", user: "vagrant"}
+  "debian"   => {box: "debian/stretch64", bootstrap_os: "debian", user: "vagrant"},
+  "ubuntu"   => {box: "ubuntu/bionic64",  bootstrap_os: "ubuntu", user: "vagrant"},
+  "centos"   => {box: "centos/7",         bootstrap_os: "centos", user: "vagrant"}
 }
 
 # Vagrant instance management
@@ -50,16 +50,16 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.define vm_name = "%s%02d" % [$instance_name_prefix, i] do |server|
-      config.vm.hostname = vm_name
+      server.vm.hostname = vm_name
       server.vm.network "private_network", ip: "#{$subnet}#{i}"
 
       # Provision
-      config.vm.provision "shell", path: "provision.sh"
+      server.vm.provision "shell", path: "provision.sh"
       # config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "/home/vagrant/.ssh/authorized_keys"
 
       # Only execute the Ansible provisioner when all the machines are up and ready
       if i == $num_instances
-        config.vm.provision "ansible" do |ansible|
+        server.vm.provision "ansible" do |ansible|
           ansible.compatibility_mode  = "2.0"
           ansible.playbook            = $playbook
           if File.exist?(File.join(File.dirname($inventory), "hosts"))
