@@ -18,7 +18,7 @@ docker_yum_repository: https://download.docker.com/linux/{{ (ansible_distributio
 docker_yum_repository_enable_edge: 0
 
 # Docker Compose.
-docker_compose_version: "1.22.0"
+docker_compose_version: "1.24.0"
 docker_compose_binary_url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-Linux-x86_64"
 docker_compose_path: /usr/local/bin/docker-compose
 
