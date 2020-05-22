@@ -3,18 +3,21 @@
 
 # List of supported operating systems
 SUPPORTED_OS = {
-  "debian"   => {box: "debian/stretch64", bootstrap_os: "debian", user: "vagrant"},
-  "ubuntu"   => {box: "ubuntu/bionic64",  bootstrap_os: "ubuntu", user: "vagrant"},
-  "centos"   => {box: "centos/7",         bootstrap_os: "centos", user: "vagrant"}
+  "debian_buster"  => {box: "debian/buster64",  bootstrap_os: "debian", user: "vagrant"},
+  "debian_stretch" => {box: "debian/stretch64", bootstrap_os: "debian", user: "vagrant"},
+  "ubuntu_focal"   => {box: "ubuntu/focal64",   bootstrap_os: "ubuntu", user: "vagrant"},
+  "ubuntu_bionic"  => {box: "ubuntu/focal64",   bootstrap_os: "ubuntu", user: "vagrant"},
+  "centos_8"       => {box: "centos/8",         bootstrap_os: "centos", user: "vagrant"},
+  "centos_7"       => {box: "centos/7",         bootstrap_os: "centos", user: "vagrant"}
 }
 
 # Vagrant instance management
-$os                     = "ubuntu"
+$os                     = "centos_7"
 $num_instances          = 1
 $instance_name_prefix   = "docker"
 $vm_memory              = 1024
 $vm_cpus                = 1
-$subnet                 = "10.0.0.6" # For 10.0.0.6X
+$subnet                 = "10.0.0.1" # For 10.0.0.1X
 $box                    = SUPPORTED_OS[$os][:box]
 
 # Ansible provisioner
