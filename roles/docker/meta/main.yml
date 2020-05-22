@@ -14,6 +14,7 @@ galaxy_info:
     versions:
     - 6
     - 7
+    - 8
   - name: Fedora
     versions:
     - all
@@ -21,11 +22,13 @@ galaxy_info:
     versions:
     - jessie
     - stretch
+    - buster
   - name: Ubuntu
     versions:
     - trusty
     - xenial
     - bionic
+    - focal
   galaxy_tags:
     - docker
     - container
