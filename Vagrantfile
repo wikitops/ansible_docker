@@ -12,7 +12,7 @@ SUPPORTED_OS = {
 }
 
 # Vagrant instance management
-$os                     = "centos_7"
+$os                     = "ubuntu_focal"
 $num_instances          = 1
 $instance_name_prefix   = "docker"
 $vm_memory              = 1024
