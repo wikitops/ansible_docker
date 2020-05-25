@@ -5,5 +5,5 @@
     name: "{{ item }}"
     groups: docker
     append: yes
-  with_items: "{{ docker_users }}"
+  loop: "{{ docker_users }}"
   tags: update-docker-user

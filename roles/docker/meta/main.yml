@@ -1,7 +1,9 @@
 ---
 
 dependencies:
-  - { role: pip, pip_packages: ["docker"] }
+  - role: pip
+    vars:
+      pip_packages: ["docker"]
 
 galaxy_info:
   author: wikitops

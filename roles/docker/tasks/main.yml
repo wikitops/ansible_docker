@@ -23,7 +23,7 @@
 
 - name: DOCKER | Manage Docker users
   include_tasks: users.yml
-  when: docker_users
+  when: docker_users is defined and docker_users != ""
   tags: update-docker-user
 
 - name: DOCKER | Log to an existing account

@@ -2,12 +2,11 @@
 
 - name: DOCKER REDHAT | Uninstall old version
   package:
-    name: "{{ item }}"
+    name:
+      - docker
+      - docker-common
+      - docker-engine
     state: absent
-  with_items:
-    - docker
-    - docker-common
-    - docker-engine
 
 - name: DOCKER REDHAT | Add gpg key
   rpm_key:
